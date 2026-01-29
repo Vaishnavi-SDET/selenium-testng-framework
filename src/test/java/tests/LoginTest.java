@@ -16,13 +16,13 @@ public class LoginTest extends BaseTest{
 	
 	@Test (priority = 1)
 	
-	public void OpenLoginPage()
+	public void openLoginPage()
 	{
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 
 		LoginPage login = new LoginPage(driver);
 
-		login.OpenLoginPage("Admin", "admin123");
+		login.openLoginPage("Admin", "admin123");
 
 		Assert.assertTrue(driver.getCurrentUrl().contains("dashboard"), "User was not redirected to Dashboard after login");
 		}
@@ -32,7 +32,7 @@ public class LoginTest extends BaseTest{
 	{
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		LoginPage login = new LoginPage(driver);
-		login.OpenLoginPage("Abc", "1234");
+		login.openLoginPage("Abc", "1234");
 		Assert.assertTrue(login.getErrorMessage().contains("Invalid"),"Invalid error message not displayed");
 		
 	}
