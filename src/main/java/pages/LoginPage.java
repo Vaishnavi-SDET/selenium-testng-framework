@@ -15,14 +15,14 @@ public class LoginPage {
 	By username = By.xpath("//input[@placeholder='Username']");
 	By password = By.xpath("//input[@placeholder='Password']");
 	By loginbtn = By.xpath("//button[@type='submit']");
-	By invalidCreds = By.className(".oxd-alert-content-text");
+	By invalidCreds = By.className("oxd-alert-content-text");
 	
 	public LoginPage (WebDriver driver)
 	{
 		this.driver = driver;
 	}
 	
-	public void OpenLoginPage (String user, String pass)
+	public void openLoginPage (String user, String pass)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		WebElement userField = wait.until(ExpectedConditions.visibilityOfElementLocated(username));
