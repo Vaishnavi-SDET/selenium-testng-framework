@@ -16,10 +16,13 @@ public class BaseTest {
 		driver.manage().window().maximize();
 	}
 	
-	/*@AfterMethod
+	@AfterMethod
 	public void kill()
 	{
-	driver.close();
-}*/
+		if (driver != null)
+		{
+			driver.close();
+		}
+}
 
 }
