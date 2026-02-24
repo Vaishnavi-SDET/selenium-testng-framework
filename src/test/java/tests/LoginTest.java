@@ -13,7 +13,6 @@ import utils.TestListener;
 public class LoginTest extends BaseTest{
 	
 	
-	
 	@Test (priority = 1)
 	
 	public void openLoginPage()
